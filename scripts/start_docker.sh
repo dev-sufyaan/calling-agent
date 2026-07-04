@@ -2,7 +2,7 @@
 set -e
 
 ENV_FILE=".env"
-REGISTRY="${REGISTRY:-ghcr.io/dograh-hq}"
+REGISTRY="${REGISTRY:-ghcr.io/dev-sufyaan}"
 ENABLE_TELEMETRY="${ENABLE_TELEMETRY:-true}"
 
 fail() {

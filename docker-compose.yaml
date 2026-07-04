@@ -141,7 +141,7 @@ services:
       - app-network
 
   api:
-    image: ${REGISTRY:-dograhai}/dograh-api:latest
+    image: ${REGISTRY:-ghcr.io/dev-sufyaan}/sufyaan-studio-api:latest
     environment:
       # Core application config
       ENVIRONMENT: "${ENVIRONMENT:-local}"
@@ -258,7 +258,7 @@ services:
       - app-network
 
   ui:
-    image: ${REGISTRY:-dograhai}/dograh-ui:latest
+    image: ${REGISTRY:-ghcr.io/dev-sufyaan}/sufyaan-studio-ui:latest
     environment:
       # Bind the Next.js standalone server to all interfaces
       HOSTNAME: "0.0.0.0"
