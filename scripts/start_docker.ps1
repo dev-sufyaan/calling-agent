@@ -217,9 +217,9 @@ Write-Host 'This will run:'
 Write-Host "  `$env:REGISTRY = '$Registry'; `$env:ENABLE_TELEMETRY = '$EnableTelemetry'; docker compose --profile tunnel up --pull always"
 Write-Host ''
 
-$answer = Read-Host 'Start Dograh now? [Y/n]'
+$answer = Read-Host 'Start Sufyaan Studio now? [Y/n]'
 if ($answer -match '^[Nn]') {
-    Write-Host 'Dograh was not started.'
+    Write-Host 'Sufyaan Studio was not started.'
     exit 0
 }
 

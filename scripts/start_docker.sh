@@ -210,10 +210,10 @@ if [[ ! -t 0 ]]; then
     exit 0
 fi
 
-read -r -p "Start Dograh now? [Y/n]: " answer
+read -r -p "Start Sufyaan Studio now? [Y/n]: " answer
 case "$answer" in
     [Nn]*)
-        echo "Dograh was not started."
+    echo "Sufyaan Studio was not started."
         exit 0
         ;;
 esac
