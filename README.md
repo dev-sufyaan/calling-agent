@@ -82,7 +82,10 @@ An honest comparison on the axes that matter most to teams evaluating voice AI p
 > If you wish to run the platform on a remote server instead, checkout our [Documentation](https://docs.dograh.com/deployment/docker#option-2:-remote-server-deployment)
 
 ```bash
-curl -o docker-compose.yaml https://raw.githubusercontent.com/dev-sufyaan/calling-agent/main/docker-compose.yaml && curl -o start_docker.sh https://raw.githubusercontent.com/dev-sufyaan/calling-agent/main/scripts/start_docker.sh && chmod +x start_docker.sh && ./start_docker.sh
+curl -o docker-compose.yaml https://raw.githubusercontent.com/dev-sufyaan/calling-agent/main/docker-compose.yaml && \
+curl -o start_docker.sh https://raw.githubusercontent.com/dev-sufyaan/calling-agent/main/scripts/start_docker.sh && \
+chmod +x start_docker.sh && \
+./start_docker.sh
 ```
 
 > **⚡ Prefer an AI agent to set it up for you?**
