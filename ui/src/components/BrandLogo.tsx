@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-// Reusable Dograh wordmark. Theme-aware by default: the dark logo shows on light
+// Reusable Sufyaan Studio wordmark. Theme-aware by default: the dark logo shows on light
 // surfaces and the light/cream logo shows on dark. Pass `inverse` to force the
 // light logo on an always-dark surface (e.g. the auth brand panel). Pass `mark`
 // to render the square logo mark instead of the full wordmark (e.g. the app

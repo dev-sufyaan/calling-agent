@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowLeft, Code, ExternalLink, Loader2, Save } from "lucide-react";
+import { ArrowLeft, Code, Loader2, Save } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 
@@ -39,7 +39,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Textarea } from "@/components/ui/textarea";
-import { TOOL_DOCUMENTATION_URLS } from "@/constants/documentation";
 import { detailFromError } from "@/lib/apiError";
 import { useAuth } from "@/lib/auth";
 
@@ -599,17 +598,6 @@ const data = await response.json();`;
                                     <Code className="w-4 h-4 mr-2" />
                                     View Code
                                 </Button>
-                            )}
-                            {TOOL_DOCUMENTATION_URLS[tool.category] && (
-                                <a
-                                    href={TOOL_DOCUMENTATION_URLS[tool.category]}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                                >
-                                    Docs
-                                    <ExternalLink className="h-3.5 w-3.5" />
-                                </a>
                             )}
                         </div>
                     </div>

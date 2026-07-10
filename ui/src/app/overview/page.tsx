@@ -77,38 +77,6 @@ export default function OverviewPage() {
                         </CardContent>
                     </Card>
                 </div>
-
-                {/* Resources Section */}
-                <Card className="mt-8">
-                    <CardHeader>
-                        <CardTitle>Resources</CardTitle>
-                        <CardDescription>
-                            Get help and learn more about Sufyaan Studio
-                        </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                        <div className="flex flex-wrap gap-4">
-                            <Button asChild variant="outline">
-                                <a
-                                    href="https://docs.dograh.com"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Documentation
-                                </a>
-                            </Button>
-                            <Button asChild variant="outline">
-                                <a
-                                    href="https://github.com/dograh-hq/dograh/issues"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Report an Issue
-                                </a>
-                            </Button>
-                        </div>
-                    </CardContent>
-                </Card>
             </div>
         </div>
     );

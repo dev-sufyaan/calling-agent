@@ -1,7 +1,7 @@
 // Shared dark two-column auth shell, used by BOTH the Stack Auth handler
 // (/handler/[...stack], cloud) and the local/OSS auth pages (/auth/login,
 // /auth/signup). LEFT: a centered card that wraps the auth form (`children`).
-// RIGHT (lg+ only): a brand/value panel with the Dograh logo, proof points, and
+// RIGHT (lg+ only): a brand/value panel with the Sufyaan Studio logo, proof points, and
 // a Bland-style enterprise CTA block at the bottom (passed in as `enterpriseSlot`).
 // Mobile collapses to the single card column. The form column scrolls and stays
 // centered so tall (sign-up) forms never clip on short viewports. Palette is the

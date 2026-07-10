@@ -1,4 +1,4 @@
-import { Check, Copy, ExternalLink, Loader2, Mic, Plus, Rocket, Trash2 } from "lucide-react";
+import { Check, Copy, Loader2, Mic, Plus, Rocket, Trash2 } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 
 import {
@@ -25,7 +25,6 @@ import {
 } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
 import { Switch } from "@/components/ui/switch";
-import { WIDGET_MODE_DOCUMENTATION_URLS } from "@/constants/documentation";
 
 interface EmbedDialogProps {
     open: boolean;
@@ -183,15 +182,7 @@ export function EmbedDialog({
                             <Rocket className="h-5 w-5" />
                             Configure Widget
                         </DialogTitle>
-                        <a
-                            href={WIDGET_MODE_DOCUMENTATION_URLS[embedMode]}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors pr-6"
-                        >
-                            Docs
-                            <ExternalLink className="h-3.5 w-3.5" />
-                        </a>
+
                     </div>
                     <DialogDescription>
                         Add &quot;{workflowName}&quot; to any website with a simple script tag.

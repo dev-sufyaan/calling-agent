@@ -82,10 +82,9 @@
   /* Single restrained warm accent — used only on primary CTAs + focus rings. */
   --cta: oklch(0.72 0.15 65);
   --cta-foreground: oklch(0.16 0.02 60);
-  /* Giant faded "dograh" wordmark (authentic Proxima Nova letterforms traced
-     from the brand logo PNG — the font is commercial, so the lettering ships
-     as static artwork in /public; fill + 0.9% opacity are baked into the
-     files). Theme-switched here; consumed by .app-surface and .auth-imprint. */
+  /* Giant faded "Sufyaan Studio" wordmark, shipped as static artwork in
+     /public (brand-imprint-*.svg); fill + low opacity are baked into the
+     files. Theme-switched here; consumed by .app-surface and .auth-imprint. */
   --brand-imprint: url("/brand-imprint-light.svg");
 }
 
@@ -193,8 +192,8 @@
 
   /* Matte app background — flat charcoal (dark) / soft paper (light), NO
      gradients, with one subtle graphic in BOTH themes: the giant faded
-     "dograh" wordmark (--brand-imprint, defined in :root/.dark) pinned to
-     the bottom of the viewport, echoing the dograh.com footer. */
+     "Sufyaan Studio" wordmark (--brand-imprint, defined in :root/.dark) pinned to
+     the bottom of the viewport. */
   /* NOTE: background-attachment: fixed positions in VIEWPORT space but only
      paints inside .app-surface, which starts right of the ~270px sidebar —
      the +135px x-shift recentres the wordmark on the VISIBLE canvas. */
@@ -216,10 +215,11 @@
     background-color: oklch(0.165 0.002 80);
   }
 
-  /* Giant faded "dograh" imprint for the auth pages (applied to the AuthShell
-     form column, shared by Stack + OSS login/signup). Same --brand-imprint as
-     .app-surface; element-relative here (no fixed attachment), so it centers
-     and scales to whatever element carries the class. */
+  /* Giant faded "Sufyaan Studio" imprint for the auth pages (applied to the
+     AuthShell form column, shared by Stack + OSS login/signup). Same
+     --brand-imprint as .app-surface; element-relative here (no fixed
+     attachment), so it centers and scales to whatever element carries the
+     class. */
   .auth-imprint {
     background-image: var(--brand-imprint);
     background-size: min(86%, 920px) auto;

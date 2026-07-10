@@ -12,7 +12,6 @@ import { ToolBadges } from "@/components/flow/ToolBadges";
 import { FlowNodeData } from "@/components/flow/types";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { NODE_DOCUMENTATION_URLS } from "@/constants/documentation";
 import { useAppConfig } from "@/context/AppConfigContext";
 import { cn } from "@/lib/utils";
 import { resolveWebhookBaseUrl } from "@/lib/webhookUrl";
@@ -54,16 +53,6 @@ const HANDLES_BY_SPEC: Record<string, { source: boolean; target: boolean }> = {
     trigger: { source: false, target: false },
     webhook: { source: false, target: false },
     qa: { source: false, target: false },
-};
-
-const DOC_URL_BY_SPEC: Record<string, string | undefined> = {
-    startCall: NODE_DOCUMENTATION_URLS.startCall,
-    agentNode: NODE_DOCUMENTATION_URLS.agent,
-    endCall: NODE_DOCUMENTATION_URLS.endCall,
-    globalNode: NODE_DOCUMENTATION_URLS.global,
-    trigger: NODE_DOCUMENTATION_URLS.apiTrigger,
-    webhook: NODE_DOCUMENTATION_URLS.webhook,
-    qa: NODE_DOCUMENTATION_URLS.qaAnalysis,
 };
 
 // ─── Helpers ──────────────────────────────────────────────────────────────
@@ -597,7 +586,6 @@ export const GenericNode = memo(({ data, selected, id, type }: GenericNodeProps)
             : { source: true, target: true });
     const badge = getBadgeForSpec(spec, styleVariant);
     const Icon = spec ? resolveIcon(spec.icon) : Circle;
-    const docUrl = DOC_URL_BY_SPEC[type];
     const contentLabel = spec?.properties.some((p) => p.name === "prompt")
         ? "Prompt"
         : "Details";
@@ -662,7 +650,6 @@ export const GenericNode = memo(({ data, selected, id, type }: GenericNodeProps)
                 title={dialogTitle}
                 onSave={handleSave}
                 isDirty={isDirty}
-                documentationUrl={docUrl}
             >
                 {open && spec && (
                     <div className="grid gap-4">

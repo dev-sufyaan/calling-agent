@@ -47,9 +47,9 @@ export function DograhCreditsCard() {
   return (
     <Card className="mb-6">
       <CardHeader>
-        <CardTitle>Dograh Model Credits</CardTitle>
+        <CardTitle>Sufyaan Studio Model Credits</CardTitle>
         <CardDescription>
-          These track usage of Dograh models using Dograh Service Keys.
+          These track usage of Sufyaan Studio models using Sufyaan Studio Service Keys.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -83,7 +83,7 @@ export function DograhCreditsCard() {
           </div>
         ) : (
           <p className="text-muted-foreground">
-            No Dograh service keys configured. Set up a service key in your model configuration to see usage.
+            No Sufyaan Studio service keys configured. Set up a service key in your model configuration to see usage.
           </p>
         )}
 
@@ -100,6 +100,7 @@ export function DograhCreditsCard() {
               variant="outline"
               className="w-full gap-2 sm:flex-1"
               onClick={() => openHireExpert("billing_card")}
+              disabled
             >
               <UserRound className="h-4 w-4" />
               Hire an Expert

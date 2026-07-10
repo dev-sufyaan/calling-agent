@@ -1,6 +1,6 @@
 /**
- * Dograh Voice Widget
- * Embeddable voice call widget for Dograh workflows
+ * Sufyaan Studio Voice Widget
+ * Embeddable voice call widget for Sufyaan Studio workflows
  * Version: 1.0.0
  */
 
@@ -52,7 +52,7 @@
     // Get token from script URL
     const script = document.currentScript || document.querySelector('script[src*="dograh-widget.js"]');
     if (!script) {
-      console.error('Dograh Widget: Script not found');
+      console.error('Sufyaan Studio Widget: Script not found');
       return;
     }
 
@@ -63,7 +63,7 @@
     const environment = scriptUrl.searchParams.get('environment');
 
     if (!token) {
-      console.error('Dograh Widget: No token found in script URL');
+      console.error('Sufyaan Studio Widget: No token found in script URL');
       return;
     }
 
@@ -123,7 +123,7 @@
         autoStart: configData.auto_start || false
       };
     } catch (error) {
-      console.error('Dograh Widget: Failed to fetch configuration', error);
+      console.error('Sufyaan Studio Widget: Failed to fetch configuration', error);
       return;
     }
 
@@ -159,7 +159,7 @@
     try {
       return JSON.parse(contextStr);
     } catch (e) {
-      console.warn('Dograh Widget: Invalid context variables', e);
+      console.warn('Sufyaan Studio Widget: Invalid context variables', e);
       return {};
     }
   }
@@ -343,7 +343,7 @@
     // Find container element
     const container = document.getElementById(state.config.containerId);
     if (!container) {
-      console.error(`Dograh Widget: Container element with id "${state.config.containerId}" not found`);
+      console.error(`Sufyaan Studio Widget: Container element with id "${state.config.containerId}" not found`);
       if (state.callbacks.onError) {
         state.callbacks.onError(new Error('Container element not found'));
       }
@@ -664,7 +664,7 @@
       await negotiate();
 
     } catch (error) {
-      console.error('Dograh Widget: Failed to start call', error);
+      console.error('Sufyaan Studio Widget: Failed to start call', error);
 
       // Release anything acquired before the failure so a retry starts clean.
       // getUserMedia may have succeeded before a later step (WebSocket /
@@ -734,7 +734,7 @@
    */
   async function fetchTurnCredentials() {
     if (!state.sessionToken) {
-      console.warn('Dograh Widget: No session token available for TURN credentials');
+      console.warn('Sufyaan Studio Widget: No session token available for TURN credentials');
       return;
     }
 

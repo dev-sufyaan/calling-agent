@@ -3,7 +3,6 @@
 import type { Team } from "@stackframe/stack";
 import {
   AlertTriangle,
-  ArrowUpCircle,
   AudioLines,
   Brain,
   ChevronLeft,
@@ -190,7 +189,7 @@ export function AppSidebar() {
   const versionInfo = config ? { ui: config.uiVersion, api: config.apiVersion } : null;
 
   // Check for updates only on self-hosted (OSS) deployments — cloud is managed for the user.
-  const { latest: latestRelease, isBehind, isLatest } = useLatestReleaseVersion(
+  const { isLatest } = useLatestReleaseVersion(
     versionInfo?.ui,
     { enabled: config?.deploymentMode === "oss" },
   );
@@ -315,6 +314,7 @@ export function AppSidebar() {
           className="h-7 w-7 rounded-full"
           onClick={() => openHireExpert("sidebar")}
           aria-label="Hire an Expert"
+          disabled
         >
           <UserRound className="h-3.5 w-3.5" />
         </Button>
@@ -328,6 +328,7 @@ export function AppSidebar() {
       size="sm"
       className="h-7 gap-1.5 rounded-full px-3 text-xs"
       onClick={() => openHireExpert("sidebar")}
+      disabled
     >
       <UserRound className="h-3.5 w-3.5" />
       Hire an Expert
@@ -354,24 +355,7 @@ export function AppSidebar() {
                 </span>
               )}
             </Link>
-            {isBehind && latestRelease && (
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <a
-                    href="https://docs.dograh.com/deployment/update"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 rounded-md border bg-amber-50 px-1.5 py-0.5 text-[10px] font-medium leading-none text-amber-900 transition-opacity hover:opacity-80 dark:bg-amber-950 dark:text-amber-200"
-                  >
-                    <ArrowUpCircle className="h-3 w-3" />
-                    Update
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent side="bottom">
-                  <p>Latest: {latestRelease} - click to see the update guide</p>
-                </TooltipContent>
-              </Tooltip>
-            )}
+
             {isLatest && (
               <Tooltip>
                 <TooltipTrigger asChild>
